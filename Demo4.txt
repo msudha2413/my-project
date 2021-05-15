@@ -1,0 +1,64 @@
+4. create a REST API in java to insert and retrieve the same records.
+
+
+
+create table emp(
+id number(10),
+name varchar2(10),
+salary number(10),
+address varchar2(10));
+
+
+package dto;
+public class Demon{
+private String name,address;
+private int id, salary;
+public void set(int i,String n, int s, String a){
+name=n;
+id=i;
+salary=s;
+address=a;
+public int getId(){
+return id;
+}
+public String getName(){
+return name;
+}
+public int getSalary(){
+return salary;
+}
+public String getSalary(){
+return salary;
+}
+}
+}
+
+
+
+package dao
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.util.ArrayList;
+import dto.Demon;
+public class Project;
+public ArrayList<demon>GetDemon(Connection connection) throws Exception{
+ArrayList<demon> demonData=new ArrayLists<demon>();
+try{
+PreparedStatement ps=Connection.preparedStatement(" select id,name.salary,address From emp ORDER BY id Desc");
+Resultset rs=ps.executeQuery();
+while(rs.next()){
+Demon demon= new Demon;
+demon.setId(rs.getInt("id"));
+demon.setName(rs.getString("name"));
+demon.setSalary(rs.getInt("salary"));
+demon.setAddress(rs.getIString("address"));
+DemonData.add(Demon);
+}
+return demondata;
+}
+catch(Exception e){
+throw e;
+}
+}
+}

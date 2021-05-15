@@ -1,0 +1,9 @@
+update student set sphone='9848861754' where sid='10';
+update student set sphone='9381022376' where sid='11';
+update student set sphone='9908702443' where sid='12';
+select * from emp;
+delete from student where sno=10;
+delete from student where sno=12;
+select * from emp;
+
+

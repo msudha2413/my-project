@@ -1,0 +1,49 @@
+1. setup a local database, create a table, insert some records using any database client.
+
+create table student(
+sid number(10),
+sname varchar2(10),
+scourse varchar2(10),
+sphone number(20),
+saddress varchar2(10));
+
+DESCRIBE student;
+
+insert into student values(sid, sname, scourse, sphone, saddress) values
+(100,'sudha','mca','9848861754','kadapa');
+(100,'sudha','mca','9789564235','hyderbad');
+(100,'sudha','mca','8569745892','karnool');
+(100,'sudha','mca','9948786575','tirupathi');
+(100,'sudha','mca','9985198647','pulivendhula');
+(100,'sudha','mca','9908702443','bangalore');
+
+
+select * from student;
+
+
+create database faculty;
+create table faculty.student;
+fid varchar2(10),
+fname varchar2(10),
+fsalary number(20),
+fmail varchar2(10));
+
+
+
+
+
+insert into faculty.student(fid,fname,fsalary,fmail) values
+('10', 'sudharani', '10000','sudharani@gmail.com'),
+('11', ' praneetha','20000','praneethanook@gmailcom'),
+('12', 'eswari', '30000','eswariutukuru87@gmail.com'),
+('13', 'sudharani', '50000','sudha2465@gmail.com'),
+('14', ' ppranavi,'40000','pranavi25@gmailcom'),
+('15', 'aravindha', '60000','aravindha56@gmail.com');
+
+
+
+
+
+
+
+

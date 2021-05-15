@@ -1,0 +1,58 @@
+
+3.   write java code to insert and retrieve the records from the the database table.
+
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+public class Demo{
+static final String DB_URL=" jdbc:mysql://localhost/TUTORIALPOINT";
+static final String USER=" sudha ";
+static final String PASS=" sudha123 ";
+public static void main(String[] args){
+try(
+Connection conn=DriverManager.hetConnection(DB_URL, USER, PASS);
+statement stmt=conn.createStatement();
+)
+{
+System.out.println(" inserting records into table:");
+String sql=" INSERT INTO emp values(101,'sudha',10000,'kadapa')";
+stmt.executeUpdate(sql);
+String sql=" INSERT INTO emp values(102,'rani',10000,'rajampet')";
+stmt.executeUpdate(sql);
+String sql=" INSERT INTO emp values(103,'eswari',10000,'rtirupathi')";
+stmt.executeUpdate(sql);
+String sql=" INSERT INTO emp values(104,'supraja',10000,'vontimitta')";
+stmt.executeUpdate(sql);
+String sql=" INSERT INTO emp values(105,'supriya',10000,'ananthapuram')";
+stmt.executeUpdate(sql);
+String sql=" INSERT INTO emp values(106,'praneetha',10000,'pul pulivendhula')";
+stmt.executeUpdate(sql);
+String sql=" INSERT INTO emp values(107,'haritha',10000,'karnool')";
+stmt.executeUpdate(sql);
+String sql=" INSERT INTO emp values(108,'aruna',10000,'koduru')";
+stmt.executeUpdate(sql);
+String sql=" INSERT INTO emp values(109,'sravanthi',10000,'madhavaram')";
+stmt.executeUpdate(sql);
+String sql=" INSERT INTO emp values(110,'sravani',10000,'bhakarapeta')";
+stmt.executeUpdate(sql);
+System.out.println(" inserted records to the table.......");
+}
+catch(SQLException e){
+e.printStackTrace();
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
